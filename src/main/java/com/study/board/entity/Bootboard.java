@@ -16,4 +16,6 @@ public class Bootboard {
     private Integer id;
     private String title;
     private String content;
+    private String filename;
+    private String filepath;
 }

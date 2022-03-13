@@ -8,6 +8,11 @@
     <h1 th:text="${bootboard.title}">제목입니다.</h1>
     <p th:text="${bootboard.content}">내용입니다.</p>
     <a th:href="@{/board/delete(id=${bootboard.id})}">글 삭제</a>
+    <a th:href="@{${bootboard.filepath}}">다운받기</a>
     <a th:href="@{/board/modify/{id}(id=${bootboard.id})}">수정</a>
+    <!--
+    th:href : a태그에 경로 걸 때 사용
+    th:text : 태그에 문자열을 출력할 때 사용
+    -->
 </body>
 </html>
