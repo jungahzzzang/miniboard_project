@@ -22,8 +22,10 @@
         </thead>
         <tbody>     <!-- 반복문 -->
             <tr th:each="bootboard : ${list}">
-                <td th:text="${bootboard.id}"></td>
-                <td th:text="${bootboard.title}"></td>
+                <td th:text="${bootboard.id}"></td>   <!-- localhost:8080/board/view?id=bootboard.id -->
+                <td>
+                    <a th:text="${bootboard.title}" th:href="@{/board/view(id=${bootboard.id})}"></a>
+                </td>
             </tr>
         </tbody>
     </table>
